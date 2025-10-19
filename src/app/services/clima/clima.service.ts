@@ -6,12 +6,12 @@ import { Observable } from "rxjs";
    providedIn: 'root'
 })
 export class ClimaService {
-
-   private rota = "https://api.hgbrasil.com/weather?woeid=455866";
+   private rota = "/api/weather?woeid=455866";
 
    constructor(private http: HttpClient) { }
 
    getClima(): Observable<any> {
-      return this.http.get(this.rota)
+      return this.http.get(this.rota);
    }
 }
+
